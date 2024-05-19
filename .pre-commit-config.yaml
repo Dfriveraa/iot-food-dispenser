@@ -1,0 +1,26 @@
+repos:
+  - repo: https://github.com/golangci/golangci-lint
+    rev: v1.57.2
+    hooks:
+      - id: golangci-lint-full
+
+  - repo: https://github.com/segmentio/golines
+    rev: v0.12.0
+    hooks:
+      - id: golines
+
+  - repo: local
+    hooks:
+      - id: go-mod-tidy
+        name: Go Mod Tidy
+        entry: go mod tidy
+        language: system
+        pass_filenames: false
+
+  - repo: local
+    hooks:
+      - id: go-build
+        name: Go Build
+        entry: go build ./...
+        language: system
+        pass_filenames: false

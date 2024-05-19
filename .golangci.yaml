@@ -1,0 +1,18 @@
+linters:
+  enable:
+    - govet
+    - gofmt
+    - goimports
+    - revive
+    - ineffassign
+    - goconst
+    - errcheck
+    - unused
+    - staticcheck
+    - gosec
+    - dupl
+    - gocyclo
+    - unconvert
+    - gochecknoinits
+    - gochecknoglobals
+    - reassign
